@@ -10,6 +10,7 @@ export function console_init(selector) {
 
 function console_write(selector, message) {
 	
+	if (! (window && window.document)) return
 	selector = selector || body
 	var div = document.createElement('div')
 	div.style.cssText = 'font-family:mono;font-size:75%'
