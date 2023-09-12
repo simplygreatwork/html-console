@@ -13,6 +13,7 @@ function console_write(selector, message) {
 	selector = selector || body
 	var div = document.createElement('div')
 	div.style.cssText = 'font-family:mono;font-size:75%'
+	message = new String(message)
 	message = message.replaceAll(' ', '&nbsp;')
 	message = message.replaceAll('\n', '<br>')
 	div.innerHTML = message
