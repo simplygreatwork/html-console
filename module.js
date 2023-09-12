@@ -1,2 +1,2 @@
 
-export { add } from './source/core.js'
+export { Logger } from './source/Logger.js'
