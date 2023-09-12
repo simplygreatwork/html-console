@@ -1,2 +1,2 @@
 
-export { Logger } from './source/Logger.js'
+export { console_init } from './source/html-console.js'
