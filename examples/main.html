@@ -6,15 +6,22 @@
 	</head>
 	<body>
 		<script type="importmap">{"imports": {
-			"html-console": "../../html-console/source/html-console.js"
+			"html-console": "../source/html-console.js"
 		}}</script>
 		<script type="module">
 			
 			import { console_init } from 'html-console'
 			
-			console_init('body')
-			console.log('Logging to both the console and to the document body at the same time.')
-						
+			let console = console_init('body')
+			// console.log('Logging to both the console and to the document body at the same time.')
+			console.log(`
+				media {
+					selector {
+						property: value;
+					}
+				}
+			`)
+			
 		</script>
 	</body>
 </html>
