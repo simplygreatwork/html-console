@@ -5,11 +5,9 @@ let selector_
 export function console_init(selector) {
 	
 	selector_ = selector						// closure?
-	return {
-		log: function(message) {
-			console_log_terminal(console, message)
-			console_log_browser(console, message)
-		}
+	console.log = function(message) {
+		console_log_terminal(console, message)
+		console_log_browser(console, message)
 	}
 }
 
