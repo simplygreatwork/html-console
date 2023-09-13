@@ -13,14 +13,14 @@ export function console_init(selector) {
 
 export function console_log_terminal(console, string) {
 	
-	string = tweak(string)
+	string = dedent(string)
 	string = string.replaceAll('\t', '  ')
 	console_log(string)
 }
 
 export function console_log_browser(console, string) {
 	
-	string = tweak(string)		
+	string = dedent(string)		
 	string = string.replaceAll(' ', '&nbsp;')
 	string = string.replaceAll('\n', '<br>')
 	string = string.replaceAll('\t', '&nbsp;&nbsp;')
@@ -29,10 +29,10 @@ export function console_log_browser(console, string) {
 	div.style.cssText = 'font-family:mono;font-size:75%'
 	div.innerHTML = string
 	console.selector = 'body'
-	document.querySelector(console.selector).appendChild(div)
+	document.querySelector(selector_).appendChild(div)
 }
 
-function tweak(string) {
+function dedent(string) {
 	
 	let array = string.split('\n')
 	if (array.length < 2) return string
