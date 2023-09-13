@@ -20,6 +20,7 @@ export function console_log_terminal(console, string) {
 
 export function console_log_browser(console, string) {
 	
+	if (! window.document) return 
 	string = dedent(string)		
 	string = string.replaceAll(' ', '&nbsp;')
 	string = string.replaceAll('\n', '<br>')
